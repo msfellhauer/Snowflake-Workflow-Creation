@@ -13,6 +13,7 @@ WAREHOUSE = Snowflake_Warehouse
 SCHEDULE = 'USING CRON 0 6 * * * America/Los_Angeles'
 COMMENT = 'Overwrites Snowflake_DB.Snowflake_Schema.Snowflake_table every day at 6:00 AM PST'
 COPY GRANTS
+CLUSTER BY (FUNDED_DATE)
 AS
 SELECT *
 FROM Snowflake_DB.Snowflake_Schema.table_2 a
